@@ -1,8 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import 'gestalt/dist/gestalt.css';
+
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Signin from './components/Signin/Signin';
+import Signup from './components/Signup/Signup'
+import Checkout from './components/Checkout/Checkout '
+
+const Root = () => (
+  <Router>
+    <Switch>
+      <Route component={App} exact path='/' />
+      <Route component={Signin} path='/signin' />
+      <Route component={Signup} path='/signup' />
+      <Route component={Checkout} path='/checkout' />
+    </Switch>
+  </Router>
+)
+
+ReactDOM.render(<Root />, document.getElementById('root'));
 registerServiceWorker();
