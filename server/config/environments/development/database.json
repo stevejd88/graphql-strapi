@@ -1,0 +1,21 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-mongoose",
+      "settings": {
+        "client": "mongo",
+        "host": "cluster0.qftpx.mongodb.net",
+        "srv": "true",
+        "port": 27017,
+        "database": "somestuff",
+        "username": "strapiSteve",
+        "password": "JungleBoogie2021!"
+      },
+      "options": {
+        "authenticationDatabase": "",
+        "ssl": true
+      }
+    }
+  }
+}
